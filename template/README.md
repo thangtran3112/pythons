@@ -12,6 +12,8 @@ Python boiler-plate templates for with VS Code
 * Ruff
 * Black Formatter
 * Material Icon Theme
+* Python Indent
+* Ruff
 
 ## Other Settings:
 * Font Size cannot be set through `settings.json`, you will have to set it up through GUI Settings.
