@@ -6,3 +6,7 @@ line-length = 88
 [lint]
 # Add the `line-too-long` rule to the enforced rule set.
 extend-select = ["E501"]
+
+[lint.per-file-ignores]
+# To ignore all pydocstyle errors (starting with "D") in your tests, add this to pyproject.toml:
+"tests/*" = ["D"]
