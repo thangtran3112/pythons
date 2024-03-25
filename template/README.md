@@ -42,3 +42,13 @@ Python boiler-plate templates for with VS Code
   }
 }
 ```
+* On `MacOS` we can setup terminal using `oh-my-zsh`
+* On Windows system, install [NerdFont](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-3-unofficial-chocolatey-or-scoop-repositories) and [oh-my-posh](https://ohmyposh.dev/docs/themes) for `Powershell`
+* On Windows system, we can change `oh-my-posh` theme with `notepad $PROFILE`, and specify:
+```  
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerline.omp.json | Invoke-Expression
+```
+And we need to specify the terminal font in VS Code `settings.json` as:
+```
+    "terminal.integrated.fontFamily": "Hack Nerd Font"
+```
