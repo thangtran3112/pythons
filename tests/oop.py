@@ -147,7 +147,7 @@ class FixedFloat:
         self.amount = amount
 
     def __repr__(self):
-        return f"<FixedFloat {self.amount:.2f}>"
+        return f"<{self.__class__.__name__} {self.amount:.2f}>"
 
     @staticmethod
     ### define a static method without self
@@ -167,7 +167,7 @@ class Euro(FixedFloat):
         self.symbol = "€"
 
     def __repr__(self):
-        return f"<Euro {self.symbol}{self.amount:.2f}>"
+        return f"<{self.__class__.__name__} {self.symbol}{self.amount:.2f}>"
 
 
 money = Euro(18.786)
@@ -176,12 +176,12 @@ new_money = Euro.from_sum(11.22, 9.99)
 print(f"new_money: {new_money}")  # Euro.from_sum(11.22, 9.99) -> FixedFloat(21.21)
 
 
-class FixedFloatClassMethod:
+class FixedFloat2:
     def __init__(self, amount):
         self.amount = amount
 
     def __repr__(self):
-        return f"<FixedFloatClassMethod {self.amount:.2f}>"
+        return f"<{self.__class__.__name__} {self.amount:.2f}>"
 
     @classmethod
     ### It is recommended to use @classmethod instead of @staticmethod
@@ -190,16 +190,16 @@ class FixedFloatClassMethod:
         return cls(value1 + value2)
 
 
-class EuroClassMethod(FixedFloatClassMethod):
+class EuroClass2(FixedFloat2):
     def __init__(self, amount):
         super().__init__(amount)
         self.symbol = "€"
 
     def __repr__(self):
-        return f"<EuroClassMethod {self.symbol}{self.amount:.2f}>"
+        return f"<{self.__class__.__name__} {self.symbol}{self.amount:.2f}>"
 
 
-new_money = EuroClassMethod.from_sum(11.22, 9.99)
+new_money = EuroClass2.from_sum(11.22, 9.99)
 print(f"new_money: {new_money}")  #  EuroClassMethod(21.21)
-second_money = FixedFloatClassMethod.from_sum(33.22, 44.44)
+second_money = FixedFloat2.from_sum(33.22, 44.44)
 print(f"second_money: {second_money}")  #  FixedFloatClassMethod(77.66)
