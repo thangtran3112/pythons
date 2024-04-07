@@ -7,3 +7,10 @@ def find_in(iterable, finder, expected):
 
 class NotFoundError(Exception):
     pass
+
+
+print(__name__)
+
+## Only run when executing this file as a script
+if __name__ == "__main__":
+    print(find_in(["Rolf", "Jen", "Anna"], lambda x: x, "Jen"))
