@@ -1,23 +1,26 @@
 {
-    "workbench.tree.indent":15,
-    "editor.minimap.renderCharacters": true,
-    "editor.minimap.size": "fill",
-    "editor.cursorStyle": "line",
-    "editor.cursorBlinking": "smooth",
-    "editor.rulers": [88, 150],
-    "[python]": {
-        "python.linting.lintOnSave": true,
-        "python.linting.enabled": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit",
-            "source.fixAll": "explicit"
-        },
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+  "workbench.tree.indent": 15,
+  "editor.minimap.renderCharacters": true,
+  "editor.minimap.size": "fill",
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.rulers": [88, 150],
+  "[python]": {
+    "python.linting.lintOnSave": true,
+    "python.linting.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
     },
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.fontFamily": "Hack Nerd Font",
-    "terminal.integrated.fontWeight": "500",
-    "terminal.integrated.fontWeightBold": "600"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeightBold": "600",
+  "files.exclude": {
+    "**/__pycache__": true
+  }
 }
