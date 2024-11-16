@@ -5,6 +5,7 @@
 ```bash
     brew install anaconda
     echo 'export PATH=/opt/homebrew/anaconda3/bin:$PATH' >> ~/.zshrc
+    conda init zsh
     source ~/.zshrc
 ```
 
@@ -19,11 +20,12 @@
     conda install python=3.12
 ```
 
-On Windows, may need to install `ipykernel`
+## Install extra packages, such as `ipykernel`, `numpy`, etc
 
 ```bash
-    pip install ipykernel # This command changes global ipykernet
     conda install -p /Users/trathanl/pythons/venv ipykernel --update-deps --force-reinstall  #This is better, it only changes venv
+
+    pip install ipykernel # Alternative
 ```
 
 ## Other way of creating python venv with python
@@ -59,3 +61,5 @@ To deactivate:
 ```bash
     deactivate
 ```
+
+## Using Ruff to check code style and grammars
