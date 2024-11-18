@@ -22,6 +22,13 @@
 
 ## Install extra packages, such as `ipykernel`, `numpy`, etc
 
+```zsh
+    conda activate venv/
+    pip install -r requirements.txt
+```
+
+or
+
 ```bash
     conda install -p /Users/trathanl/pythons/venv ipykernel --update-deps --force-reinstall  #This is better, it only changes venv
 
